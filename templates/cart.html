@@ -1,0 +1,20 @@
+
+<ion-view view-title="Cart Items">
+  <ion-content>  
+        <ion-list>
+      	 <ion-item class="item my-item item-icon-right" ng-repeat="(key , cartItem) in cartItems | unique:'name' " >
+      	 <p>{{cartItem.name}}</p>
+      	 <p>Price:<span id="currency-default"> {{cartItem.price | currency}}</span></p>         
+      	 <p>Qty: {{getCount(cartItem.name)}}</p>
+      	 <!--<i ng-click="remove(cartItem)" class="icon ion-ios-trash-outline"></i>-->
+         <a ng-click="deleteCartItem(cartItem.name)" class="button button-icon icon ion-ios-trash-outline"></a>
+      	 </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+    <button class="button button-clear ">Total: <span id="currency-default"> {{getTotal() | currency}}</span></button>
+    <button class="button button-positive icon-right ion-chevron-right" ng-click="esignpage()" > Procced & order </button>
+  </div>
+
+</ion-view>

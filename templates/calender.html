@@ -1,0 +1,19 @@
+<ion-view view-title="Calender">
+	<ion-content>
+		<ion-item-group>
+			<ion-list ng-repeat="(key, value) in data | groupBy: 'date':true">
+		      <div class="item item-divider">
+		        <p>{{ key | date : "d MMMM y" }} <span style="float:right" item-right>{{ key | date : "EEEE" }}</span></p>
+		      </div>
+
+			<a class="item" href="#/app/incidents/{{event.id}}" ng-repeat="event in value">		    
+			    <h2>{{event.title}}</h2>
+	        	<!--<p>{{event.id}}</p>-->
+	        	<p>{{event.date | date: "MM/dd/yyyy 'at' h:mma"}}</p>
+	        </a>
+		    
+
+		    </ion-list>
+		</ion-item-group>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-view view-title="Incident">
+  <ion-content>    
+    <div class="card">
+        <div class="item item-text-wrap" ng-repeat="incident in incidents" >
+        	<h2>{{incident[1]}}</h2>
+        	<P>Reference Number# {{incident[0]}}</P>
+          <P>Status: {{incident[3]}}</P>
+        	<P>Create At: {{incident[9] | date: 'medium'}}</P>
+        	<P>Modified At: {{incident[10] | date: 'medium'}}</P><br/>
+
+          <h3>Contact Info:</h3>
+          <P>Name: {{incident[4]}}</P>
+          <P>Location: {{incident[7]}}</P>
+          <P>Call: <a href="tel:+1-1800-555-5555" >+971-222-223456</a></P>
+
+        	<button ng-if="incident[2] !== '121'" class="button button-full button-balanced" ng-click="checkIn(incident[0])">
+            {{text}}
+          </button>
+
+          <button ng-if="incident[2] === '121'" class="button button-full button-stable" >
+            Checked-In At : {{incident[10] | date: "MM/dd/yyyy 'at' h:mma"}}
+          </button>
+
+        </div>
+    </div>
+    
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+  <button class="button " > </button>  
+   <!--<a nav-clear class="button icon-right ion-chevron-right button-positive" href="#/app/search/{{incidentId}}">            Create Estimate 
+          </a>-->
+          <button class="button icon-right ion-chevron-right button-positive" ng-click="go('/app/search/{{incidentId}}')">
+      Create Estimate 
+   </button>
+  </div>
+</ion-view>

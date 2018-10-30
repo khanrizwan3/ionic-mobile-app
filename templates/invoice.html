@@ -1,0 +1,40 @@
+<ion-view cache-view="false" view-title="Invoice">
+  <ion-content>  
+  <div class="row">
+  <div class="col">To,</div>
+  
+  <div class="col">Ref#: {{ref_no}}</div>
+  </div>
+  <div class="row">
+  <div class="col">ABC XYZ</div>
+  </div>
+         <ion-list>
+      	 <ion-item class="item my-item item-icon-right" ng-repeat="(key , cartItem) in cartItems | unique:'name' " >
+      	 <p>{{cartItem.name}}</p>
+      	 <p>Price:<span id="currency-default"> {{cartItem.price | currency}}</span> Qty: {{getCount(cartItem.name)}} </p>
+      	 </ion-item>
+    </ion-list>
+    <div class="row">
+      <div class="col">&nbsp;</div>
+      <div class="col">&nbsp;</div>
+
+      <div class="col">Total: <span id="currency-default"> {{getTotal() | currency}}</span></div>
+    </div>
+    <img ng-src='{{image}}'/>
+    <!--<a nav-clear class="button button-block button-calm" href="#/app/incidents">-->
+  <!--<i class="icon ion-ios7-information SS-tab-icon"></i>-->
+  <!-- << Back To home Screen
+</a>-->
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+  <button class="button " > </button>  
+   <!--<a class="button icon-left ion-chevron-left button-positive" href="#/app/incidents">Back To home Screen</a>-->
+
+   <button class="button icon-left ion-chevron-left button-positive" ng-click="go('/app/incidents')">
+      Complete Order
+   </button>
+
+  </div>
+
+</ion-view>

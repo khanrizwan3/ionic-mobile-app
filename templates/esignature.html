@@ -1,0 +1,25 @@
+<ion-view cache-view="false" view-title="Signature Drawpad">
+      <ion-pane>
+      <ion-content class='has-header padding' scroll='false'>
+          <canvas id='signatureCanvas' width='340' height='180' style='border: 1px solid black;'></canvas>
+          <!--<div class='button-bar'> -->
+              <a  class='button icon-right ion-android-cancel small' ng-click='clearCanvas()'>Clear</a>
+              <a  height='30' class='button  icon-right ion-checkmark small' ng-click='saveCanvas()'>Select</a>
+          <!--</div>-->
+          <br>
+          <img ng-src='{{signature}}'/>
+          <p>{{targetPath}}</p>
+           <!--<button class="button button-full button-calm" ng-click="invoicePage()">Done</button>-->
+      </ion-content>
+
+   <div class="bar bar-footer bar-stable">
+      <button class="button " > </button>  
+      <!--<a nav-clear class="button icon-right ion-chevron-right button-positive" ng-click="invoicePage()" > Done
+            </a>-->
+   <button class="button icon-right ion-chevron-right button-positive" ng-click="invoicePage()">Done</button>
+    
+  </div>
+      
+    </ion-pane>
+
+</ion-view>

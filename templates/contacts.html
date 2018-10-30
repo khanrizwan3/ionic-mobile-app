@@ -1,0 +1,13 @@
+<ion-view view-title="Contacts">
+
+  <ion-content>
+	<div class="list">
+	    <a class="item item-thumbnail-left" ng-repeat="value in data" href="#/app/profile/{{value[0]}}" >
+	      <img src="https://web.saumag.edu/directory/wp-content/plugins/campus-directory/images/contact-default.png">
+	      <h2>{{value[1]}}</h2>
+	      <!--<p>Nine Inch Nails</p>-->
+	    </a>
+	</div>
+
+  </ion-content> 
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="Profile">
+  <ion-content>
+
+	<div id="profile-bg"></div>
+      <div id="content">
+        <div id="profile-info">
+          <img id="profile-image" src="https://web.saumag.edu/directory/wp-content/plugins/campus-directory/images/contact-default.png">
+          <h3 id="profile-name">{{profile.name.first}}</h3>          
+          <span id="profile-description">{{profile.name.last}}</span><br>          
+        </div>
+
+      	<div class="card">
+		  <div class="item item-text-wrap">
+		    <p>City: {{profile.address.city}}<p>
+		    <!--<p>Country: {{profile.address.country}}<p>-->
+		    <p>Postal Code: {{profile.address.postalCode}}<p>
+		    <p>Street: {{profile.address.street}}<p>
+		  </div>
+		</div>
+
+      </div>
+  </ion-content>
+</ion-view>
