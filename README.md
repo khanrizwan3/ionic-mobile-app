@@ -10,9 +10,9 @@ Customer Signature Digital Signature
 # Required package for QR and Barcode Scan.
 #For Installing QR-Code.
 
- ionic cordova plugin add cordova-plugin-qrscanner
+ionic cordova plugin add cordova-plugin-qrscanner
 
- npm install --save @ionic-native/qr-scanner
+npm install --save @ionic-native/qr-scanner
 
 For Digital Signature.
 
